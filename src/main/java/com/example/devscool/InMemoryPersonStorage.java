@@ -1,5 +1,6 @@
 package com.example.devscool;
 
+
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
