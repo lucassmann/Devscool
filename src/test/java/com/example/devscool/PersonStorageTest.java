@@ -14,7 +14,7 @@ public class PersonStorageTest {
     private final Person testPerson1 = new Person("testPerson1", 1);
 
     @Test
-    void getAllIsEmpty_returnsTrue(){
+    void givenAllIsEmpty_thenTrue(){
         Assertions.assertThat(inMemoryPersonStorage.getAll()).isEmpty();
     }
 
