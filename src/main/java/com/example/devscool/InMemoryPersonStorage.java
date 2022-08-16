@@ -21,9 +21,7 @@ public class InMemoryPersonStorage implements PersonStorage{
     }
 
     @Override
-    public List<Person> getAll() {
-        return people;
-    }
+    public List<Person> getAll() {return this.people;}
 
     public String toString(){
         return people.stream()
