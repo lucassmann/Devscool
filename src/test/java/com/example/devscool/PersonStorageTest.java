@@ -11,23 +11,23 @@ public class PersonStorageTest {
 
     @Autowired
     private InMemoryPersonStorage inMemoryPersonStorage;
-    private final Person huguinho = new Person("Huguinho", 1);
+    private final Person testPerson1 = new Person("testPerson1", 1);
 
     @Test
     void getAllIsEmpty_returnsTrue(){
-        Assertions.assertThat(inMemoryPersonStorage.getAll().isEmpty());
+        Assertions.assertThat(inMemoryPersonStorage.getAll()).isEmpty();
     }
 
     @Test
     void whenAddOnePersonThenGetAllSize_returnsOne(){
-        inMemoryPersonStorage.add(huguinho);
+        inMemoryPersonStorage.add(testPerson1);
         Assertions.assertThat(inMemoryPersonStorage.getAll().size()).isEqualTo(1);
     }
 
     @Test
     void whenAddAPersonThenGetAllThenContainsSamePerson(){
-        inMemoryPersonStorage.add(huguinho);
-        Assertions.assertThat(inMemoryPersonStorage.getAll().contains(huguinho));
+        inMemoryPersonStorage.add(testPerson1);
+        Assertions.assertThat(inMemoryPersonStorage.getAll()).contains(testPerson1);
     }
 
 
